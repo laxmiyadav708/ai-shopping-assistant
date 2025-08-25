@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.nav-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-left ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-layout {
+  display: flex;
+  height: calc(100vh - 64px);
+  justify-content: center;
+  align-items: center;
+}
+.center-wrapper {
+  width: 800px;
+  max-width: 90%;
+  margin: auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+
+.chat-panel {
+  height: 500px;
+  width: 60%;
+  padding: 2rem;
+  background-color: white;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.chat-input button {
+  padding: 0.75rem 1rem;
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bot-msg, .user-msg {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.bot-msg {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.user-msg {
+  background-color: #1e293b;
+  color: white;
+  margin-left: auto;
+}
+
+.product-panel {
+  width: 60%;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+}
+
+.card .brand {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.card .strike {
+  color: #94a3b8;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+.card button {
+  margin-top: 0.5rem;
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
