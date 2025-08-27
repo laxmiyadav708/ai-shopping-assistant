@@ -30,9 +30,22 @@ def generate():
 
     try:
         response = model.generate_content(prompt)
-        return jsonify({"response": response.text})
+
+        # Clean markdown symbols and unwanted characters
+        clean_text = response.text.replace("*", "").replace("•", "").replace("8.", "").strip()
+
+        # Optional: Replace common markdown bullets with custom symbols
+        formatted = clean_text.replace("Option 1:", "➤ Option 1:") \
+                              .replace("Option 2:", "➤ Option 2:") \
+                              .replace("Option 3:", "➤ Option 3:")
+
+        # Replace double line breaks with single for smoother flow
+        formatted = formatted.replace("\n\n", "\n")
+
+        return jsonify({"response": formatted})
     except Exception as e:
         return jsonify({"response": f"Error: {str(e)}"}), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)
